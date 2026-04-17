@@ -19,8 +19,9 @@ class AuthController extends Controller
         'email' => $request->email,
         'password' => Hash::make($request->password)
     ]);
+    }
 
-    public function login (Request $request)
+     public function login (Request $request)
     {
         $request->validate([
             'email' => 'required|email',
@@ -38,6 +39,6 @@ class AuthController extends Controller
 
     }
 
+
     
-    }
 }
